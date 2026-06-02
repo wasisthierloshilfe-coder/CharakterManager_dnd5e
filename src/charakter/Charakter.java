@@ -150,6 +150,12 @@ public class Charakter {
     public Inventar getInventar(){
         return this.inventar;
     }
+    
+    //Adder Methoden
+    public void addItem(Item item){
+        inventar.addItem(item);
+    }
+    
     //TO STRING
     public String toString(){
          return """

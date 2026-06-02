@@ -25,7 +25,7 @@ public class main {
         System.out.println("Plus 1 kon");
         x.setAttribute(new Attribute(16, 16, 9, 8, 7, 7));
         System.out.print(x);
-        System.out.println(x.getName());
+        
 
 
         s.next();

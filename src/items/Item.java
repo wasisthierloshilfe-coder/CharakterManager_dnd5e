@@ -13,9 +13,6 @@ public class Item{
     private List<Effekt> effekte;
     
 
-    public boolean istAusgerüstet(){
-        return this.istAusgeruestet;
-    }
     public void addEffekt(Effekt effekt){
         this.effekte.add(effekt);
     }
@@ -53,7 +50,10 @@ public class Item{
     }
 
     public String toString(){
-        return "Name: " + this.getName();
+        return "Name: " + this.getName()+
+            "\nBeschreibung: " + this.getBeschreibung() +
+            "\nAusrüstbar: " + this.getAusruestbar() +
+            "\nAusgerüstet: " + this.getAusgeruestet();
 
     }
 }

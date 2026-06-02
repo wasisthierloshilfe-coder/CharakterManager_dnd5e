@@ -18,7 +18,9 @@ public class Inventar{
         }
         return effekte;
     }
-
+    public void addItem(Item item){
+        items.add(item);
+    }
     public List<Item> getItems(){
         return this.items;
     }
