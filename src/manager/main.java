@@ -3,6 +3,7 @@ package manager;
 import charakter.Charakter;
 import charakter.Gesinnung;
 import attribute.Attribute;
+import items.Item;
 import java.util.Scanner;
 
 public class main {
@@ -25,8 +26,8 @@ public class main {
         System.out.println("Plus 1 kon");
         x.setAttribute(new Attribute(16, 16, 9, 8, 7, 7));
         System.out.print(x);
-        
-
+        x.addItem(new Item("Cooles Schwert +2", "Gibt richtig aufs Maul", true, false));
+        System.out.print(x.getInventar().printInventar());
 
         s.next();
         s.close();

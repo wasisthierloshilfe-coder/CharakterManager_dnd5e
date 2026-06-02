@@ -24,4 +24,12 @@ public class Inventar{
     public List<Item> getItems(){
         return this.items;
     }
+    public String printInventar(){
+        StringBuilder s = new StringBuilder();
+        for(Item item:this.items){
+            s.append(item.toString());
+        }
+        return s.toString();
+    }
+
 }
