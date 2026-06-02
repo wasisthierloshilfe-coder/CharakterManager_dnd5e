@@ -120,7 +120,7 @@ public class Charakter {
     }
 
     //Getter Methoden
-     public String getName(){
+    public String getName(){
         return this.name;
     }
     public int getAlter(){
@@ -147,6 +147,10 @@ public class Charakter {
     public int getAktuellesLeben(){
         return this.aktuelleLeben;
     }
+    public Inventar getInventar(){
+        return this.inventar;
+    }
+    //TO STRING
     public String toString(){
          return """
             \n=== Charakter ===
