@@ -119,8 +119,33 @@ public class Charakter {
         this.aktuelleLeben -= damage;
     }
 
+    //Getter Methoden
+     public String getName(){
+        return this.name;
+    }
+    public int getAlter(){
+        return this.alter;
+    }
+    public double getGrousse(){
+        return this.groesse;
+    }
+    public Gesinnung getGesinnung(){
+        return this.gesinnung;
+    }
+    public String getHintergrund(){
+        return this.hintergrund;
+    }
     public Attribute getAttribute(){
         return this.attribute;
+    }
+    public int getLevel(){
+        return this.level;
+    }
+    public int getMaxLeben(){
+        return this.maxLeben;
+    }
+    public int getAktuellesLeben(){
+        return this.aktuelleLeben;
     }
     public String toString(){
          return """
