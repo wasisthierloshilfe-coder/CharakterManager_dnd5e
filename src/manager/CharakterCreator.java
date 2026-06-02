@@ -4,7 +4,7 @@ import items.Inventar;
 import attribute.*;
 import java.util.Scanner;
 
-public class Char_ersteller {
+public class CharakterCreator {
     
     public static final Scanner input = new Scanner(System.in);
 
@@ -80,7 +80,7 @@ public class Char_ersteller {
     }
 
 
-    public Attribute creatAttribute(){
+    public Attribute createAttribute(){
         
         //Datenabfrage
         System.out.print("\nGib mir deine Stärke: ");
@@ -137,22 +137,27 @@ public class Char_ersteller {
         //NAME
         System.out.println("Gib mir dein Namen");
         setName(input.next());
+	//LEVEL
         System.out.println("Gib mir dein Level");
-        setLevel(input.nextInt());
-        System.out.println("Wähle dein Geschlecht");
-        setGeschlecht(pickGeschlecht());
-        System.out.println("Gib mir dein alter");
-        setAlter(input.nextInt());
-        System.out.println("Gib mir deine Größe");
-        setGrousse(input.nextDouble());
-        
+	setLevel(input.nextInt());
+        //GESCHLECHT
+	System.out.println("Wähle dein Geschlecht");
+	setGeschlecht(pickGeschlecht());
+        //ALTER
+	System.out.println("Gib mir dein Alter");
+	setAlter(input.nextInt());
+        //GRÖẞE
+	System.out.println("Gib mir deine Größe");
+	setGrousse(input.nextDouble());
+        //GESINNUNG
         System.out.println("Wähle deine Gesinnung");
         setGesinnung(pickGesinnung());
         
         //Erstellt Attribute und setzt
-        setAttribute(creatAttribute());
+        setAttribute(createAttribute());
 
-
+	//LEBEN ?VIELLEICHT FÜR MOBS
+	//WIRD SPÄTER DURCH KLASSE ERRECHNET
         System.out.println("Gib mir dein Maximales leben");
         setMaxLeben(input.nextInt());
         setAktuellesLeben(getMaxLeben());

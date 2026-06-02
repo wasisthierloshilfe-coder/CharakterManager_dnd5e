@@ -84,7 +84,7 @@ public class Charakter {
         // Ausgerüstete Gegenstände
         if(inventar != null){
             for ( Item ausruestung : inventar.getItems()) {
-                if (ausruestung.istAusgerüstet()) {
+                if (ausruestung.getAusgeruestet()) {
                     effekte.addAll(ausruestung.getEffekte());
                 }
             }
