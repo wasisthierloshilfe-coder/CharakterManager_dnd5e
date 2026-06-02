@@ -1,4 +1,4 @@
-package tallente;
+package talente;
 import java.util.List;
 
 import effekte.Effekt;
