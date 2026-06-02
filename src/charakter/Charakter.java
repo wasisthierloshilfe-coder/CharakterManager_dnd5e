@@ -3,8 +3,8 @@ import attribute.*;
 import effekte.*;
 import klassen.*;
 import rassen.*;
-import tallente.*;
 import spells.*;
+import talente.*;
 import items.*;
 
 import java.util.ArrayList;
@@ -166,7 +166,10 @@ public class Charakter {
     public void addItem(Item item){
         inventar.addItem(item);
     }
-    
+    //TODO
+    //public void addSprache(Sprachen sprache){
+    //    sprachen.add(sprache);
+    //}
     //TO STRING
     public String toString(){
          return """
