@@ -90,7 +90,7 @@ public class Charakter {
         return effekte;
     }
 
-        //Setter
+    //Setter
     public void setName(String name){
         this.name = name;
     }
