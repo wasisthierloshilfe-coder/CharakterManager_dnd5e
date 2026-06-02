@@ -14,10 +14,11 @@ import java.util.List;
 
 public class Charakter {
 
-    public Charakter(String name,int level ,int alter, double groesse, Gesinnung gesinnung, Attribute stats, int maxLeben, int leben){
+    public Charakter(String name,int level ,Geschlecht geschlecht,int alter, double groesse, Gesinnung gesinnung, Attribute stats, int maxLeben, int leben){
         setName(name);
         setLevel(level);
         setAlter(alter);
+        setGeschlecht(geschlecht);
         setGrousse(groesse);
         setGesinnung(gesinnung);
         setAttribute(stats);
@@ -29,6 +30,7 @@ public class Charakter {
     // Info
     private int id;
     private String name;
+    private Geschlecht geschlecht;
     private int alter;
     private double groesse;
     private Gesinnung gesinnung;
@@ -97,6 +99,9 @@ public class Charakter {
     public void setAlter(int alter){
         this.alter = alter;
     }
+    public void setGeschlecht(Geschlecht geschlecht){
+        this.geschlecht = geschlecht;
+    }
     public void setGrousse(double groesse){
         this.groesse = groesse;
     }
@@ -128,6 +133,9 @@ public class Charakter {
     }
     public int getAlter(){
         return this.alter;
+    }
+    public Geschlecht getGeschlecht(){
+        return this.geschlecht;
     }
     public double getGrousse(){
         return this.groesse;

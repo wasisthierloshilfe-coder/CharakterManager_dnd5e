@@ -11,6 +11,7 @@ public class Char_ersteller {
     private String name;
     private int level;
     private int alter;
+    private Geschlecht geschlecht;
     private double groesse;
     private Gesinnung gesinnung;
     private Attribute attribute;
@@ -25,6 +26,9 @@ public class Char_ersteller {
     }
     private void setAlter(int alter){
         this.alter = alter;
+    }
+    private void setGeschlecht(Geschlecht geschlecht){
+        this.geschlecht = geschlecht;
     }
     private void setGrousse(double groesse){
         this.groesse = groesse;
@@ -52,6 +56,9 @@ public class Char_ersteller {
     }
     private int getAlter(){
         return this.alter;
+    }
+    private Geschlecht getGeschlecht(){
+        return this.geschlecht;
     }
     private double getGrousse(){
         return this.groesse;
@@ -91,7 +98,22 @@ public class Char_ersteller {
 
         return new Attribute(staerke, geschicklichkeit, konstitution, intelligenz, weisheit, charisma);
     }
-    
+    public Geschlecht pickGeschlecht(){
+        Geschlecht[] werte = Geschlecht.values();
+        for (int i = 0; i < werte.length; i++) {
+            System.out.println((i + 1) + ". " + werte[i]);
+        }
+        while (true) {
+            System.out.print("> ");
+            int auswahl = input.nextInt();
+            if (auswahl >= 1 && auswahl <= werte.length) {
+                
+                return werte[auswahl - 1];
+            }
+
+            System.out.println("Ungültige Nummer.");
+        }
+    }
     public Gesinnung pickGesinnung(){
         Gesinnung[] werte = Gesinnung.values();
 
@@ -116,10 +138,13 @@ public class Char_ersteller {
 
 
     public Charakter create(){
+        //NAME
         System.out.println("Gib mir dein Namen");
         setName(input.next());
         System.out.println("Gib mir dein Level");
         setLevel(input.nextInt());
+        System.out.println("Wähle dein Geschlecht");
+        setGeschlecht(pickGeschlecht());
         System.out.println("Gib mir dein alter");
         setAlter(input.nextInt());
         System.out.println("Gib mir deine Größe");
@@ -137,7 +162,7 @@ public class Char_ersteller {
         setAktuellesLeben(getMaxLeben());
 
         input.close();
-        return new Charakter(name, level, alter, groesse, gesinnung, attribute, maxLeben, aktuelleLeben);
+        return new Charakter(name, level, geschlecht, alter ,groesse, gesinnung, attribute, maxLeben, aktuelleLeben);
     }
     
     public Charakter getCharakter(){
