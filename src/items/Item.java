@@ -39,7 +39,7 @@ public class Item{
         this.ausruestbar = ausruestbar;
     }
     public void setAusgeruestet(boolean ausgeruestet){
-        this.ausruestbar = ausgeruestet;
+        this.ausgeruestet = ausgeruestet;
     }
 
 
@@ -54,14 +54,14 @@ public class Item{
         return this.ausruestbar;
     }
     public boolean getAusgeruestet(){
-        return this.ausruestbar;
+        return this.ausgeruestet;
     }
 
     public String toString(){
-        return "Name: " + this.getName()+
+        return "\nName: " + this.getName()+
             "\nBeschreibung: " + this.getBeschreibung() +
             "\nAusrüstbar: " + this.getAusruestbar() +
-            "\nAusgerüstet: " + this.getAusgeruestet();
+            "\nAusgerüstet: " + this.getAusgeruestet() +"\n";
 
     }
 }

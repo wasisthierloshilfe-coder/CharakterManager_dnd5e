@@ -14,12 +14,15 @@ import java.util.List;
 
 public class Charakter {
 
-    public Charakter(String name, int alter, double groesse, Gesinnung gesinnung, Attribute stats){
+    public Charakter(String name,int level ,int alter, double groesse, Gesinnung gesinnung, Attribute stats, int maxLeben, int leben){
         setName(name);
+        setLevel(level);
         setAlter(alter);
         setGrousse(groesse);
         setGesinnung(gesinnung);
         setAttribute(stats);
+        setMaxLeben(maxLeben);
+        setAktuellesLeben(leben);
 
     }
 
