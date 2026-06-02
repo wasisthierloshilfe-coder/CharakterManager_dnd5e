@@ -8,8 +8,16 @@ public class Item{
     String name;
     String beschreibung;
     boolean ausruestbar;
-    boolean istAusgeruestet;
+    boolean ausgeruestet;
     
+    public Item(String name, String beschreibung, boolean ausruestbar, boolean ausgeruestet){
+        this.setName(name);
+        this.setBeschreibung(beschreibung);
+        this.setAusruestbar(ausruestbar);
+        this.setAusgeruestet(ausgeruestet);
+    
+    }
+
     private List<Effekt> effekte;
     
 
@@ -27,11 +35,11 @@ public class Item{
     public void setBeschreibung(String beschreibung){
         this.beschreibung = beschreibung;
     }
-    public void setAusruestbar(Boolean istAusruestbar){
-        this.ausruestbar = istAusruestbar;
+    public void setAusruestbar(Boolean ausruestbar){
+        this.ausruestbar = ausruestbar;
     }
-    public void setAusgeruestet(boolean istAusgeruestet){
-        this.ausruestbar = istAusgeruestet;
+    public void setAusgeruestet(boolean ausgeruestet){
+        this.ausruestbar = ausgeruestet;
     }
 
 
