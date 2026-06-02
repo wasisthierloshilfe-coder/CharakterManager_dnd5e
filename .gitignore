@@ -1,0 +1,12 @@
+# Compilierte Klassen
+*.class
+
+# Build Ordner
+out/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
