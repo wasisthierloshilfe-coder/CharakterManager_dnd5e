@@ -110,19 +110,15 @@ public class Char_ersteller {
                 
                 return werte[auswahl - 1];
             }
-
             System.out.println("Ungültige Nummer.");
         }
     }
     public Gesinnung pickGesinnung(){
         Gesinnung[] werte = Gesinnung.values();
-
         //Auflistung
         for (int i = 0; i < werte.length; i++) {
             System.out.println((i + 1) + ". " + werte[i]);
         }
-
-
         while (true) {
             System.out.print("> ");
             int auswahl = input.nextInt();

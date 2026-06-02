@@ -176,12 +176,12 @@ public class Charakter {
             HP: %d/%d
             RK: %d
 
-            STR: %d
-            DEX: %d
-            CON: %d
-            INT: %d
-            WIS: %d
-            CHA: %d
+            STR: %d %d
+            DEX: %d %d
+            CON: %d %d
+            INT: %d %d
+            WIS: %d %d
+            CHA: %d %d
             """
             .formatted(
                     name,
@@ -189,12 +189,12 @@ public class Charakter {
                     aktuelleLeben,
                     maxLeben,
                     ruestungsklasse,
-                    attribute.get_staerke(),
-                    attribute.get_geschicklichkeit(),
-                    attribute.get_konstitution(),
-                    attribute.get_intelligenz(),
-                    attribute.get_weisheit(),
-                    attribute.get_charisma()
+                    attribute.get_staerke(), attribute.get_staerke_mod(),
+                    attribute.get_geschicklichkeit(),attribute.get_geschicklichkeit_mod(),
+                    attribute.get_konstitution(),attribute.get__konstitution_mod(),
+                    attribute.get_intelligenz(),attribute.get_inteligenz_mod(),
+                    attribute.get_weisheit(),attribute.get_weisheit_mod(),
+                    attribute.get_charisma(),attribute.get_charisma_mod()
             );
     }
 

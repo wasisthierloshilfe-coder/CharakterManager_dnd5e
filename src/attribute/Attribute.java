@@ -88,7 +88,7 @@ public class Attribute {
     public int get__konstitution_mod() {
         return berechneModifikator(this.konstitution);
     }
-    public int get_intiligenz_mod() {
+    public int get_inteligenz_mod() {
         return berechneModifikator(this.intelligenz);
     }
     public int get_weisheit_mod() {
