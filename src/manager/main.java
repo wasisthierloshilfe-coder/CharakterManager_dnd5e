@@ -25,7 +25,6 @@ public class main {
         System.out.println(a);
 
 
-
         s.close();
     }
 

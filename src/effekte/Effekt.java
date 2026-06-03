@@ -17,4 +17,6 @@ public interface Effekt {
 
     void setBeschreibung(String bescheibung);
     String getBeschreibung();
+
+    Effekt getEffekt();
 }

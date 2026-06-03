@@ -7,7 +7,6 @@ public enum AttributTyp {
     INTELLIGENZ,
     WEISHEIT,
     CHARISMA,
-
     RK,
     INITIATIVE,
     BEWEGUNG,

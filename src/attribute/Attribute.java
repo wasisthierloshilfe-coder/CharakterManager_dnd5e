@@ -2,12 +2,12 @@ package attribute;
 public class Attribute {
 
     public Attribute(int staerke ,int geschicklichkeit ,int konstitution ,int intelligenz ,int weisheit ,int charisma){
-        set_staerke(staerke);
-        set_geschicklichkeit(geschicklichkeit);
-        set_konstitution(konstitution);
-        set_intelligenz(intelligenz);
-        set_weisheit(weisheit);
-        set_charisma(charisma);
+        setStaerke(staerke);
+        setGeschicklichkeit(geschicklichkeit);
+        setKonstitution(konstitution);
+        setIntelligenz(intelligenz);
+        setWeisheit(weisheit);
+        setCharisma(charisma);
     }
     private int staerke;
     private int geschicklichkeit;
@@ -19,82 +19,82 @@ public class Attribute {
 
 
     // addiere Attribute dazu
-    public void add_staerke(int i){
+    public void addStaerke(int i){
         this.staerke+= i;
     }
-    public void add_geschicklichkeit(int i){
+    public void addGeschicklichkeit(int i){
         this.geschicklichkeit+= i;
     }
-    public void add_konstitution(int i){
+    public void addKonstitution(int i){
         this.konstitution+= i;
     }
-    public void add_intelligenz(int i){
+    public void addIntelligenz(int i){
         this.intelligenz+= i;
     }
-    public void add_weisheit(int i){
+    public void addWeisheit(int i){
         this.weisheit+= i;
     }
-    public void add_charisma(int i){
+    public void addCharisma(int i){
         this.charisma+= i;
     }
     //setze Attribute
-    public void set_staerke(int i){
+    public void setStaerke(int i){
         this.staerke= i;
     }
-    public void set_geschicklichkeit(int i){
+    public void setGeschicklichkeit(int i){
         this.geschicklichkeit= i;
     }
-    public void set_konstitution(int i){
+    public void setKonstitution(int i){
         this.konstitution= i;
     }
-    public void set_intelligenz(int i){
+    public void setIntelligenz(int i){
         this.intelligenz= i;
     }
-    public void set_weisheit(int i){
+    public void setWeisheit(int i){
         this.weisheit= i;
     }
-    public void set_charisma(int i){
+    public void setCharisma(int i){
         this.charisma= i;
     }
     // bekomme Attribute
-    public int get_staerke(){
+    public int getStaerke(){
         return this.staerke;
     }    
-    public int get_geschicklichkeit(){
+    public int getGeschicklichkeit(){
         return this.geschicklichkeit;
     }
-    public int get_konstitution(){
+    public int getKonstitution(){
         return this.konstitution;
     }
-    public int get_intelligenz(){
+    public int getIntelligenz(){
         return this.intelligenz;
     }
-    public int get_weisheit(){
+    public int getWeisheit(){
         return this.weisheit;
     }
-    public int get_charisma(){
+    public int getCharisma(){
         return this.charisma;
     }
     // bekomme Modifikator
     public static int berechneModifikator(int wert) {
         return Math.floorDiv(wert - 10, 2);
     }
-    public int get_staerke_mod() {
+    public int getStaerke_mod() {
         return berechneModifikator(this.staerke);
     }
-    public int get_geschicklichkeit_mod() {
+    public int getGeschicklichkeit_mod() {
         return berechneModifikator(this.geschicklichkeit);
     }
-    public int get__konstitution_mod() {
+    public int getKonstitution_mod() {
         return berechneModifikator(this.konstitution);
     }
-    public int get_inteligenz_mod() {
+    public int getIntelligenz_mod() {
         return berechneModifikator(this.intelligenz);
     }
-    public int get_weisheit_mod() {
+    public int getWeisheit_mod() {
         return berechneModifikator(this.weisheit);
     }
-    public int get_charisma_mod() {
+    public int getCharisma_mod() {
         return berechneModifikator(this.charisma);
     }
     

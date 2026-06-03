@@ -9,6 +9,8 @@ public class Item{
     String beschreibung;
     boolean ausruestbar;
     boolean ausgeruestet;
+    private List<Effekt> effekte;
+    
     
     public Item(String name, String beschreibung, boolean ausruestbar, boolean ausgeruestet){
         this.setName(name);
@@ -18,16 +20,9 @@ public class Item{
     
     }
 
-    private List<Effekt> effekte;
+
+
     
-
-    public void addEffekt(Effekt effekt){
-        this.effekte.add(effekt);
-    }
-    public List<Effekt> getEffekte(){
-        return effekte;
-    }
-
     //Setter Methoden
     public void setName(String name){
         this.name = name;
@@ -41,7 +36,10 @@ public class Item{
     public void setAusgeruestet(boolean ausgeruestet){
         this.ausgeruestet = ausgeruestet;
     }
-
+    public void addEffekt(Effekt effekt){
+        this.effekte.add(effekt);
+    }
+    
 
     //Getter Methoden
     public String getName(){
@@ -56,6 +54,10 @@ public class Item{
     public boolean getAusgeruestet(){
         return this.ausgeruestet;
     }
+    public List<Effekt> getEffekte(){
+        return effekte;
+    }
+
 
     public String toString(){
         return "\nName: " + this.getName()+

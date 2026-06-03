@@ -30,7 +30,7 @@ public class Charakter {
     // Info
     private int id;
     private String name;
-    private Geschlecht geschlecht;
+    private String geschlecht;
     private int alter;
     private double groesse;
     private Gesinnung gesinnung;
@@ -91,7 +91,7 @@ public class Charakter {
         }
         return effekte;
     }
-
+    
     //Setter
     public void setName(String name){
         this.name = name;
@@ -167,7 +167,6 @@ public class Charakter {
     public void takeDamage(int damage){
         this.aktuelleLeben -= damage;
     }
-    //TODO
     public void addSprache(String sprache){
         sprachen.add(sprache);
     }
@@ -179,7 +178,7 @@ public class Charakter {
     public String toString(){
          return """
             \n=== Charakter ===
-            Name: %s
+            Name: %d
             Level: %d  Geschlecht: %d
             HP: %d/%d  RK: %d
 
@@ -193,16 +192,16 @@ public class Charakter {
             """
             .formatted(
                     name,
-                    level,
+                    level, geschlecht,
                     aktuelleLeben,
                     maxLeben,
                     ruestungsklasse,
-                    attribute.get_staerke(), attribute.get_staerke_mod(),
-                    attribute.get_geschicklichkeit(),attribute.get_geschicklichkeit_mod(),
-                    attribute.get_konstitution(),attribute.get__konstitution_mod(),
-                    attribute.get_intelligenz(),attribute.get_inteligenz_mod(),
-                    attribute.get_weisheit(),attribute.get_weisheit_mod(),
-                    attribute.get_charisma(),attribute.get_charisma_mod()
+                    attribute.getStaerke(), attribute.getStaerke_mod(),
+                    attribute.getGeschicklichkeit(),attribute.getGeschicklichkeit_mod(),
+                    attribute.getKonstitution(),attribute.getKonstitution_mod(),
+                    attribute.getIntelligenz(),attribute.getIntelligenz_mod(),
+                    attribute.getWeisheit(),attribute.getWeisheit_mod(),
+                    attribute.getCharisma(),attribute.getCharisma_mod()
             );
     }
 

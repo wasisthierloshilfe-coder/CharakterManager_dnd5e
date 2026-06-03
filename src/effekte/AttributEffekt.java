@@ -51,10 +51,14 @@ public class AttributEffekt implements Effekt {
     public int getMod() {
         return this.modifikator;
     }
+    @Override
     public String getBeschreibung(){
         return this.beschreibung;
     }
-
+    @Override
+    public Effekt getEffekt(){
+        return this;
+    }
 
 
 
