@@ -5,4 +5,4 @@ public enum Geschlecht {
     WEIBLICH,
     DIVERSE;
     }
-}
+

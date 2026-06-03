@@ -30,7 +30,7 @@ public class Charakter {
     // Info
     private int id;
     private String name;
-    private String geschlecht;
+    private Geschlecht geschlecht;
     private int alter;
     private double groesse;
     private Gesinnung gesinnung;
@@ -76,22 +76,20 @@ public class Charakter {
         if(klasse != null)effekte.addAll(klasse.getEffekte());
 
         // Talente
-        if(talente != null){
-            for (Talent talent : talente) {
-                effekte.addAll(talent.getEffekte());
-            }
+        for (Talent talent : talente) {
+            effekte.addAll(talent.getEffekte());
         }
         // Ausgerüstete Gegenstände
         if(inventar != null){
             for ( Item ausruestung : inventar.getItems()) {
-                if (ausruestung.getAusgeruestet()) {
+                if (ausruestung != null && ausruestung.getAusgeruestet()) {
                     effekte.addAll(ausruestung.getEffekte());
                 }
             }
         }
         return effekte;
     }
-    
+
     //Setter
     public void setName(String name){
         this.name = name;
@@ -176,21 +174,19 @@ public class Charakter {
 
     //TO STRING
     public String toString(){
-         return """
-            \n=== Charakter ===
-            Name: %d
-            Level: %d  Geschlecht: %d
-            HP: %d/%d  RK: %d
-
-            Attribute:
-            STR: %d (%d)
-            DEX: %d (%d)
-            CON: %d (%d)
-            INT: %d (%d)
-            WIS: %d (%d)
-            CHA: %d (%d)
-            """
-            .formatted(
+         return String.format(
+            "\n=== Charakter ===\n" +
+            "Name: %s\n" +
+            "Level: %d  Geschlecht: %s\n" +
+            "HP: %d / %d  RK: %d\n" +
+            "\n" +
+            "Attribute:\n" +
+            "STR: %d (%d)\n" +
+            "DEX: %d (%d)\n" +
+            "CON: %d (%d)\n" +
+            "INT: %d (%d)\n" +
+            "WIS: %d (%d)\n" +
+            "CHA: %d (%d)\n",
                     name,
                     level, geschlecht,
                     aktuelleLeben,

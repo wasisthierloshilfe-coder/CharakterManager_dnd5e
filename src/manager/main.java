@@ -14,7 +14,7 @@ public class main {
         CharakterCreator charakterCreator = new CharakterCreator();
         ItemCreator itemCreator = new ItemCreator();
 
-        
+        Item item = itemCreator.create();
         Charakter a = charakterCreator.create();
         
         

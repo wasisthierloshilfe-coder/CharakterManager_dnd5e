@@ -10,12 +10,12 @@ public class AttributEffekt implements Effekt {
     public AttributEffekt(String quelle, AttributTyp typ, int wert) {
         this.quelle = quelle;
         this.typ = typ;
-        this.wert = wert;
+        this.modifikator = wert;
     }
     public AttributEffekt(String quelle, AttributTyp typ, int wert, String beschreibung) {
         this.quelle = quelle;
         this.typ = typ;
-        this.wert = wert;
+        this.modifikator = wert;
         this.beschreibung = beschreibung;
     }
 
