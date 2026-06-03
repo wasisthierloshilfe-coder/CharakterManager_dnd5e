@@ -123,9 +123,7 @@ public class Charakter {
     public void setAktuellesLeben(int leben){
         this.aktuelleLeben = leben;
     }
-    public void takeDamage(int damage){
-        this.aktuelleLeben -= damage;
-    }
+
 
     //Getter Methoden
     public String getName(){
@@ -166,25 +164,32 @@ public class Charakter {
     public void addItem(Item item){
         inventar.addItem(item);
     }
+    public void takeDamage(int damage){
+        this.aktuelleLeben -= damage;
+    }
     //TODO
-    //public void addSprache(Sprachen sprache){
-    //    sprachen.add(sprache);
-    //}
+    public void addSprache(String sprache){
+        sprachen.add(sprache);
+    }
+
+
+
+
     //TO STRING
     public String toString(){
          return """
             \n=== Charakter ===
             Name: %s
-            Level: %d
-            HP: %d/%d
-            RK: %d
+            Level: %d  Geschlecht: %d
+            HP: %d/%d  RK: %d
 
-            STR: %d %d
-            DEX: %d %d
-            CON: %d %d
-            INT: %d %d
-            WIS: %d %d
-            CHA: %d %d
+            Attribute:
+            STR: %d (%d)
+            DEX: %d (%d)
+            CON: %d (%d)
+            INT: %d (%d)
+            WIS: %d (%d)
+            CHA: %d (%d)
             """
             .formatted(
                     name,
