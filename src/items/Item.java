@@ -1,6 +1,7 @@
 package items;
 
 import java.util.List;
+import java.util.ArrayList;
 
 import effekte.Effekt;
 
@@ -17,6 +18,7 @@ public class Item{
         this.setBeschreibung(beschreibung);
         this.setAusruestbar(ausruestbar);
         this.setAusgeruestet(ausgeruestet);
+        this.effekte = new ArrayList<Effekt>();
     
     }
 
@@ -64,7 +66,8 @@ public class Item{
             "\nBeschreibung: " + this.getBeschreibung() +
             "\nAusrüstbar: " + this.getAusruestbar() +
             "\nAusgerüstet: " + this.getAusgeruestet() +"\n";
-
+        //    "\nEffekte: " + this.getEffekte() + "\n";
+        
     }
 }
    

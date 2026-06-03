@@ -24,7 +24,12 @@ public class Charakter {
         setAttribute(stats);
         setMaxLeben(maxLeben);
         setAktuellesLeben(leben);
-
+        this.sprachen = new ArrayList<>();
+        this.talente = new ArrayList<>();
+        this.zauberliste = new ArrayList<>();
+        this.inventar = new Inventar();
+        this.fertigkeiten = new ArrayList<>();
+        this.rettungswuerfe = new ArrayList<>();   
     }
 
     // Info
@@ -36,19 +41,16 @@ public class Charakter {
     private Gesinnung gesinnung;
     private String hintergrund;
 
-
-
-
     // Gameplay
     private Rasse rasse;
     private Klasse klasse;
-    private List<Talent> talente = new ArrayList<>();
+    private List<Talent> talente;
     private int level;
-    private List<String> sprachen = new ArrayList<>();
+    private List<String> sprachen;
 
     //Inventar und Spells
-    private Inventar inventar = new Inventar();
-    private List<Spell> zauberliste = new ArrayList<>();
+    private Inventar inventar;
+    private List<Spell> zauberliste;
 
     // Attribute
     private Attribute attribute;
@@ -61,8 +63,8 @@ public class Charakter {
     private int laufreichweite;
 
     // Proficiencies
-    private List<String> fertigkeiten = new ArrayList<>();
-    private List<String> rettungswuerfe = new ArrayList<>();
+    private List<String> fertigkeiten;
+    private List<String> rettungswuerfe;
     private int uebungsbonus = 2;
 
     //Gibt alles Effekte in Liste<Effekt> zurück

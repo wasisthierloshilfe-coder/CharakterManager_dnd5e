@@ -139,21 +139,21 @@ public class CharakterCreator {
         setName(input.next());
 	//LEVEL
         System.out.println("Gib mir dein Level");
-	setLevel(input.nextInt());
-        //GESCHLECHT
-	System.out.println("Wähle dein Geschlecht");
-	setGeschlecht(pickGeschlecht());
-        //ALTER
-	System.out.println("Gib mir dein Alter");
-	setAlter(input.nextInt());
-        //GRÖẞE
-	System.out.println("Gib mir deine Größe");
-	setGrousse(input.nextDouble());
-        //GESINNUNG
+	    setLevel(input.nextInt());
+    //GESCHLECHT
+	    System.out.println("Wähle dein Geschlecht");
+	    setGeschlecht(pickGeschlecht());
+    //ALTER
+	    System.out.println("Gib mir dein Alter");
+	    setAlter(input.nextInt());
+    //GRÖẞE
+	    System.out.println("Gib mir deine Größe");
+	    setGrousse(input.nextDouble());
+    //GESINNUNG
         System.out.println("Wähle deine Gesinnung");
         setGesinnung(pickGesinnung());
         
-        //Erstellt Attribute und setzt
+    //Erstellt Attribute und setzt
         setAttribute(createAttribute());
 
 	//LEBEN ?VIELLEICHT FÜR MOBS
@@ -162,6 +162,8 @@ public class CharakterCreator {
         setMaxLeben(input.nextInt());
         setAktuellesLeben(getMaxLeben());
 
+
+        
         input.close();
         return new Charakter(name, level, geschlecht, alter ,groesse, gesinnung, attribute, maxLeben, aktuelleLeben);
     }
