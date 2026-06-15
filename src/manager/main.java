@@ -16,30 +16,22 @@ public class main {
         //PLAYGROUND
         CharakterCreator charakterCreator = new CharakterCreator();
         
+   
 
 
-
-        Charakter a = charakterCreator.create();
-        System.out.println("Charakter erstellt" );
-        //TODO - ItemCreator itemCreator = new ItemCreator();
-
-
-
+        //Dummy Item
         Item boots = new Item("Stiefel der Schnelligkeit", "Diese Stiefel verleihen dem Träger erhöhte Geschwindigkeit.", true, false);
-        System.out.println("Item erstellt");
+        System.out.println("-----------Item erstellt");
 
         
-        
+        //Effekt erstellt und angefügt
         boots.addEffekt(new AttributEffekt(  "Stiefel der Schnelligkeit", AttributTyp.GESCHICKLICHKEIT, 2, "Erhöht die Geschicklichkeit um 2 Punkte."       ));
-        System.out.println("Effekt hinzugefügt");
+        System.out.println("-----------Effekt hinzugefügt Geschwindigkeit");
 
-        a.addItem(boots);
-        System.out.println("Item zum Charakter hinzugefügt");
-
-
-        //Charakter output
-        System.out.println(a + " mit " + boots);
-
+        //Effekt erstellt und angefügt
+        boots.addEffekt(new EffektCreator().create());
+        System.out.println("----------Effekt angefügt Gesicht");
+        System.out.println(boots);
 
         s.close();
     }

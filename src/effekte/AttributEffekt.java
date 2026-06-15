@@ -66,5 +66,9 @@ public class AttributEffekt implements Effekt {
         return this.attributTyp;
     }
 
-
+    //TODO 
+    public String toString(){
+        //DUMMY
+        return this.beschreibung;
+    }
 }

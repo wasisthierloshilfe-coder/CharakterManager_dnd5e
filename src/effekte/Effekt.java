@@ -17,4 +17,6 @@ public interface Effekt {
     String getBeschreibung();
 
     Effekt getEffekt();
+
+    String toString();
 }

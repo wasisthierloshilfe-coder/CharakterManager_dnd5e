@@ -62,12 +62,17 @@ public class Item{
 
 
     public String toString(){
-        return "\nName: " + this.getName()+
+        StringBuilder s = new StringBuilder(); 
+        s.append("\nName: " + this.getName()+
             "\nBeschreibung: " + this.getBeschreibung() +
             "\nAusrüstbar: " + this.getAusruestbar() +
-            "\nAusgerüstet: " + this.getAusgeruestet() +"\n";
-        //    "\nEffekte: " + this.getEffekte() + "\n";
-        
+            "\nAusgerüstet: " + this.getAusgeruestet() +"\n" +
+            "\nEffekte: \n");
+        for(Effekt effekt :this.effekte){
+            s.append(effekt+"\n");
+        }
+        return s.toString();
+
     }
 }
    
