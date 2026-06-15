@@ -44,9 +44,10 @@ public class Charakter {
     // Gameplay
     private Rasse rasse;
     private Klasse klasse;
-    private List<Talent> talente;
     private int level;
+    private List<Talent> talente;
     private List<String> sprachen;
+    private List<Effekt> effekte;
 
     //Inventar und Spells
     private Inventar inventar;
@@ -63,6 +64,7 @@ public class Charakter {
     private int laufreichweite;
 
     // Proficiencies
+    // Von Klasse + Talent
     private List<String> fertigkeiten;
     private List<String> rettungswuerfe;
     private int uebungsbonus = 2;
@@ -123,7 +125,9 @@ public class Charakter {
     public void setAktuellesLeben(int leben){
         this.aktuelleLeben = leben;
     }
-
+    public void setEffekte(){
+        this.effekte = getAlleEffekte();
+    }
 
     //Getter Methoden
     public String getName(){
@@ -170,7 +174,9 @@ public class Charakter {
     public void addSprache(String sprache){
         sprachen.add(sprache);
     }
-
+    public void addSpell(Spell spell){
+        zauberliste.add(spell);
+    }
 
 
 

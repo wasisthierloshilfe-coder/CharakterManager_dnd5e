@@ -81,7 +81,6 @@ public class CharakterCreator {
 
 
     public Attribute createAttribute(){
-        
         //Datenabfrage
         System.out.print("\nGib mir deine Stärke: ");
         int staerke = input.nextInt();
@@ -119,11 +118,11 @@ public class CharakterCreator {
         for (int i = 0; i < werte.length; i++) {
             System.out.println((i + 1) + ". " + werte[i]);
         }
+        //Auswahl
         while (true) {
             System.out.print("> ");
             int auswahl = input.nextInt();
             if (auswahl >= 1 && auswahl <= werte.length) {
-                
                 return werte[auswahl - 1];
             }
 
@@ -134,7 +133,7 @@ public class CharakterCreator {
 
 
     public Charakter create(){
-        //NAME
+    //NAME
         System.out.println("Gib mir dein Namen");
         setName(input.next());
 	//LEVEL
