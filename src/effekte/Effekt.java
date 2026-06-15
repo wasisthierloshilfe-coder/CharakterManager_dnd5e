@@ -1,7 +1,5 @@
 package effekte;
 
-import attribute.AttributTyp;
-
 public interface Effekt {
 
     
@@ -9,8 +7,8 @@ public interface Effekt {
     void setQuelle(String quelle);
     String getQuelle();
 
-    void setTyp(EffektTyp typ);
-    EffektTyp getTyp();
+    void setEffektTyp(EffektTyp typ);
+    EffektTyp getEffektTyp();
 
     void setModifikator(int modifikator);
     int getModifikator();

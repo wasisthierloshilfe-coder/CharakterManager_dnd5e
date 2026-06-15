@@ -3,7 +3,8 @@ import attribute.AttributTyp;
 public class AttributEffekt implements Effekt {
 
     private String quelle;
-    private AttributTyp typ;
+    private EffektTyp effektTyp;
+    private AttributTyp attributTyp;
     private int modifikator;
     private String beschreibung = "";
 
@@ -25,8 +26,8 @@ public class AttributEffekt implements Effekt {
         this.quelle = quelle;
     }
     @Override
-    public void setTyp(AttributTyp typ){
-        this.typ = typ;
+    public void setEffektTyp(EffektTyp typ){
+        this.effektTyp = typ;
     }
     @Override
     public void setModifikator(int modifikator){
@@ -36,7 +37,9 @@ public class AttributEffekt implements Effekt {
     public void setBeschreibung(String beschreibung){
         this.beschreibung = beschreibung;
     }
-
+    public void setAttributTyp(AttributTyp typ){
+        this.attributTyp = typ;
+    }
 
 //Getter
     @Override
@@ -44,11 +47,11 @@ public class AttributEffekt implements Effekt {
         return this.quelle;
     }
     @Override
-    public AttributTyp getTyp() {
-        return this.typ;
+    public EffektTyp getEffektTyp() {
+        return this.effektTyp;
     }
     @Override
-    public int getMod() {
+    public int getModifikator() {
         return this.modifikator;
     }
     @Override
@@ -59,7 +62,9 @@ public class AttributEffekt implements Effekt {
     public Effekt getEffekt(){
         return this;
     }
-
+    public AttributTyp getAttributTyp(){
+        return this.attributTyp;
+    }
 
 
 }
