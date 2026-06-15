@@ -17,7 +17,7 @@ public class EffektCreator implements Creator<Effekt> {
         Scanner input = new Scanner(System.in);
         System.out.println("Gib mir die Quelle");
         this.quelle = input.next();
-        System.out.println("Gib mir den Typ");
+        //System.out.println("Gib mir den Typ");
         //TODO aus ENUM auswählen
 	    this.typ = AttributTyp.INTELLIGENZ;
 
@@ -31,5 +31,4 @@ public class EffektCreator implements Creator<Effekt> {
         Effekt effekt = new AttributEffekt(this.quelle, this.typ ,this.modifikator, this.beschreibung);
         return effekt;
     }
-    
 }
