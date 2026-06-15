@@ -9,7 +9,7 @@ public interface Effekt {
     void setQuelle(String quelle);
     String getQuelle();
 
-    void setTyp(AttributTyp typ);
+    void setTyp(EffektTyp typ);
     AttributTyp getTyp();
 
     void setModifikator(int modifikator);

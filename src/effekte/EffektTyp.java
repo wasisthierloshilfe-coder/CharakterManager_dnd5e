@@ -1,0 +1,16 @@
+package effekte;
+
+public enum EffektTyp {
+    ATTRIBUT,
+    FERTIGKEIT,
+    RETTUNGSWURF,
+    RUESTUNGKLASSE,
+    SCHADEN,
+    ANGRIFFSWURF,
+    BEWEGUNG,
+    TREFFERPUNKTE_TEMP,
+    AKTIONSEFFIZENTZ,
+    REICHWEITE,
+    RESISTENZ,
+    IMMUNITAET;
+}
