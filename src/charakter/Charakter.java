@@ -65,8 +65,9 @@ public class Charakter {
 
     // Proficiencies
     // Von Klasse + Talent
-    private List<String> fertigkeiten;
-    private List<String> rettungswuerfe;
+    private List<AttributTyp> fertigkeiten;
+    private List<AttributTyp> rettungswuerfe;
+    // TODO Abhängig von level berechnen
     private int uebungsbonus = 2;
 
     //Gibt alles Effekte in Liste<Effekt> zurück

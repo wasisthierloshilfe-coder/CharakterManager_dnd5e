@@ -9,12 +9,36 @@ public class Attribute {
         setWeisheit(weisheit);
         setCharisma(charisma);
     }
+    //Grundattribute
     private int staerke;
     private int geschicklichkeit;
     private int konstitution;
     private int intelligenz;
     private int weisheit;
     private int charisma;
+    //Fertigkeiten
+    //staerke
+    private int athletik = 0;
+    //geschicklichkeit
+    private int akrobatik = 0;
+    private int fingerfertigkeit = 0;
+    private int heimlichkeit = 0;
+    //intiligenz
+    private int arkankund = 0;
+    private int geschichte = 0;
+    private int naturkunde = 0;
+    private int religion = 0;
+    private int untersuchen = 0;
+    //weisheit
+    private int tierUmgang = 0;
+    private int menschenkentis = 0;
+    private int ueberleben = 0;
+    private int wahrnehmung;
+    //charisma
+    private int auftreten = 0;
+    private int einschuechtern = 0;
+    private int ueberzeugen = 0;
+    private int taeuschung = 0;
 
 
 
