@@ -10,12 +10,12 @@ public interface Effekt {
     String getQuelle();
 
     void setTyp(EffektTyp typ);
-    AttributTyp getTyp();
+    EffektTyp getTyp();
 
     void setModifikator(int modifikator);
-    int getMod();
+    int getModifikator();
 
-    void setBeschreibung(String bescheibung);
+    void setBeschreibung(String beschreibung);
     String getBeschreibung();
 
     Effekt getEffekt();

@@ -1,6 +1,6 @@
 package charakter;
 
-public enum Faehrtigkeit {
+public enum Fertigkeit {
     //staerke
     ATHLETIK,
     //geschicklichkeit
