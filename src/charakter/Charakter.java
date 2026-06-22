@@ -68,7 +68,7 @@ public class Charakter {
     private List<AttributTyp> fertigkeiten;
     private List<AttributTyp> rettungswuerfe;
     // TODO Abhängig von level berechnen
-    private int uebungsbonus = 2;
+    private int uebungsbonus;
 
     //Gibt alles Effekte in Liste<Effekt> zurück
     public List<Effekt> getAlleEffekte(){
@@ -96,6 +96,9 @@ public class Charakter {
     }
 
     //Setter
+    private void setId(int id){
+        this.id = id;
+    }
     public void setName(String name){
         this.name = name;
     }
@@ -117,8 +120,17 @@ public class Charakter {
     public void setAttribute(Attribute stats){
         this.attribute = stats;
     }
+    public void setInitiative(){
+        this.initiative = attribute.getGeschicklichkeit_mod();
+    }
+    public void setLaufreichweite(int geschwindigkeit){
+        this.laufreichweite =  geschwindigkeit;
+    }
     public void setLevel(int level){
         this.level = level;
+    }
+    public void setUebungsbonus(){
+        this.uebungsbonus = 1 + Math.ceilDiv(this.getLevel(),4);
     }
     public void setMaxLeben(int leben){
         this.maxLeben = leben;
@@ -131,6 +143,9 @@ public class Charakter {
     }
 
     //Getter Methoden
+    public int getID(){
+        return this.id;
+    }
     public String getName(){
         return this.name;
     }
@@ -152,8 +167,17 @@ public class Charakter {
     public Attribute getAttribute(){
         return this.attribute;
     }
+    public int getInitative(){
+        return this.initiative;
+    }
     public int getLevel(){
         return this.level;
+    }
+    public int getUebungsbonus(){
+        return this.uebungsbonus;
+    }
+    public int getLaufreichweite(){
+        return this.laufreichweite;
     }
     public int getMaxLeben(){
         return this.maxLeben;
@@ -163,6 +187,15 @@ public class Charakter {
     }
     public Inventar getInventar(){
         return this.inventar;
+    }
+    public List<Effekt> getEffekte(){
+        return this.effekte;
+    }
+    public List<AttributTyp> getFertigkeit(){
+        return this.fertigkeiten;
+    }
+    public List<AttributTyp> getRettungswuerfe(){
+        return this.rettungswuerfe;
     }
     
     //Adder Methoden
@@ -178,7 +211,12 @@ public class Charakter {
     public void addSpell(Spell spell){
         zauberliste.add(spell);
     }
-
+    public void addFertigkeit(AttributTyp typ){
+        this.fertigkeiten.add(typ);
+    }
+    public void addRettungswuerf(AttributTyp typ){
+        this.rettungswuerfe.add(typ);
+    }
 
 
     //TO STRING
