@@ -67,7 +67,6 @@ public class Charakter {
     // Von Klasse + Talent
     private List<AttributTyp> fertigkeiten;
     private List<AttributTyp> rettungswuerfe;
-    // TODO Abhängig von level berechnen
     private int uebungsbonus;
 
     //Gibt alles Effekte in Liste<Effekt> zurück
@@ -96,7 +95,7 @@ public class Charakter {
     }
 
     //Setter
-    private void setId(int id){
+    private void setID(int id){
         this.id = id;
     }
     public void setName(String name){

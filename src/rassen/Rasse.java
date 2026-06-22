@@ -1,6 +1,6 @@
 package rassen;
-import java.util.List;
 
+import java.util.List;
 import effekte.Effekt;
 public class Rasse {
 
@@ -8,7 +8,11 @@ public class Rasse {
 
     private List<Effekt> effekte;
 
-    public List<Effekt> getEffekte(){
-        return effekte;
+    public String getName(){
+        return this.name;
     }
+    public List<Effekt> getEffekt(){
+        return this.effekte;
+    }
+
 }
