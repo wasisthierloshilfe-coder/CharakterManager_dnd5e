@@ -1,10 +1,10 @@
 package effekte;
 
 public class SchadenEffekt implements Effekt{
-    String quelle;
-    EffektTyp effektTyp;
-    int modifikator;
-    String beschreibung;
+    private String quelle;
+    private EffektTyp effektTyp = EffektTyp.SCHADEN;
+    private int modifikator;
+    private String beschreibung;
 
     
     //Setter

@@ -1,10 +1,10 @@
 package effekte;
 
 public class AngriffswurfEffekt implements Effekt {
-    String quelle;
-    EffektTyp effektTyp;
-    int modifikator;
-    String beschreibung;
+    private String quelle;
+    private EffektTyp effektTyp;
+    private int modifikator;
+    private String beschreibung;
 
     
     //Setter

@@ -2,7 +2,7 @@ package effekte;
 
 public class FertigkeitEffekt implements Effekt{
     String quelle;
-    EffektTyp effektTyp;
+    EffektTyp effektTyp = EffektTyp.FERTIGKEIT;
     int modifikator;
     String beschreibung;
 

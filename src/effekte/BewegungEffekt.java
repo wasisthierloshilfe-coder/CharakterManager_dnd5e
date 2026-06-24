@@ -2,7 +2,7 @@ package effekte;
 
 public class BewegungEffekt implements Effekt{
     String quelle;
-    EffektTyp effektTyp;
+    EffektTyp effektTyp = EffektTyp.BEWEGUNG;
     int modifikator;
     String beschreibung;
 

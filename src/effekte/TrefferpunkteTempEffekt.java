@@ -1,10 +1,10 @@
 package effekte;
 
 public class TrefferpunkteTempEffekt implements Effekt{
-    String quelle;
-    EffektTyp effektTyp;
-    int modifikator;
-    String beschreibung;
+    private String quelle;
+    private EffektTyp effektTyp =EffektTyp.TREFFERPUNKTE_TEMP;
+    private int modifikator;
+    private String beschreibung;
 
     
     //Setter

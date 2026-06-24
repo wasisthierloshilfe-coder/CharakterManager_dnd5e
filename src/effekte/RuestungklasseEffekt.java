@@ -1,10 +1,10 @@
 package effekte;
 
 public class RuestungklasseEffekt implements Effekt{
-    String quelle;
-    EffektTyp effektTyp;
-    int modifikator;
-    String beschreibung;
+    private String quelle;
+    private EffektTyp effektTyp = EffektTyp.RUESTUNGKLASSE;
+    private int modifikator;
+    private String beschreibung;
 
     
     //Setter

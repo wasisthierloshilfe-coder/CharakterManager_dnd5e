@@ -1,12 +1,16 @@
 package effekte;
 
 public class ResitenzEffekt implements Effekt{
-    String quelle;
-    EffektTyp effektTyp;
-    int modifikator;
-    String beschreibung;
+    private String quelle;
+    private EffektTyp effektTyp = EffektTyp.RESISTENZ;
+    private int modifikator;
+    private String beschreibung;
 
-    
+    public ResitenzEffekt(String quelle, int modifikator, String beschreibung){
+        setQuelle(quelle);
+        setModifikator(modifikator);
+        setBeschreibung(beschreibung);
+    }
     //Setter
     @Override
     public void setQuelle(String quelle){

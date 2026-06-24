@@ -3,7 +3,7 @@ import attribute.AttributTyp;
 public class AttributEffekt implements Effekt {
 
     private String quelle;
-    private EffektTyp effektTyp;
+    private EffektTyp effektTyp = EffektTyp.ATTRIBUT;
     private AttributTyp attributTyp;
     private int modifikator;
     private String beschreibung = "";
