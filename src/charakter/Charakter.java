@@ -15,6 +15,7 @@ import java.util.List;
 public class Charakter {
 
     public Charakter(String name,int level ,Geschlecht geschlecht,int alter, double groesse, Gesinnung gesinnung, Attribute stats, int maxLeben, int leben){
+        setID(0); //TODO Charaktere Nummerieren
         setName(name);
         setLevel(level);
         setAlter(alter);

@@ -11,7 +11,7 @@ public class Rasse {
     public String getName(){
         return this.name;
     }
-    public List<Effekt> getEffekt(){
+    public List<Effekt> getEffekte(){
         return this.effekte;
     }
 
