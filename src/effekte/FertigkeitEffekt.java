@@ -1,10 +1,10 @@
 package effekte;
 
 public class FertigkeitEffekt implements Effekt{
-    String quelle;
-    EffektTyp effektTyp = EffektTyp.FERTIGKEIT;
-    int modifikator;
-    String beschreibung;
+    private String quelle;
+    private EffektTyp effektTyp = EffektTyp.FERTIGKEIT;
+    private int modifikator;
+    private String beschreibung;
 
     
     //Setter
