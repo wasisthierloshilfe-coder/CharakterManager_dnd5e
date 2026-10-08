@@ -1,9 +1,6 @@
 package effekte;
 
 public interface Effekt {
-
-    
-
     void setQuelle(String quelle);
     String getQuelle();
 

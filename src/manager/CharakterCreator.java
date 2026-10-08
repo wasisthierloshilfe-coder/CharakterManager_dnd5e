@@ -4,7 +4,7 @@ import items.Inventar;
 import attribute.*;
 import java.util.Scanner;
 
-public class CharakterCreator {
+public class CharakterCreator implements Creator<Charakter>{
     
     public static final Scanner input = new Scanner(System.in);
 
@@ -131,7 +131,7 @@ public class CharakterCreator {
     }
 
 
-
+    @Override 
     public Charakter create(){
     //NAME
         System.out.println("Gib mir dein Namen");
